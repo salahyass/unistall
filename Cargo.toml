@@ -1,0 +1,17 @@
+[package]
+name = "uninstall-ctx"
+version = "0.1.0"
+edition = "2021"
+description = "Right-click 'Uninstall Program' for .exe and .lnk files"
+
+[dependencies]
+# Only dependency: safe registry access. MessageBoxW / ShellExecuteW are
+# declared by hand in main.rs, so no windows-sys / windows crate is needed.
+winreg = "0.52"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

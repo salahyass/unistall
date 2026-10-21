@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+; EDIT the path below (use doubled backslashes) before importing.
+
+[HKEY_CURRENT_USER\Software\Classes\lnkfile\shell\UninstallProgram]
+@="Uninstall Program"
+"Icon"="C:\\Tools\\uninstall-ctx\\uninstall-ctx.exe,0"
+
+[HKEY_CURRENT_USER\Software\Classes\lnkfile\shell\UninstallProgram\command]
+@="\"C:\\Tools\\uninstall-ctx\\uninstall-ctx.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\exefile\shell\UninstallProgram]
+@="Uninstall Program"
+"Icon"="C:\\Tools\\uninstall-ctx\\uninstall-ctx.exe,0"
+
+[HKEY_CURRENT_USER\Software\Classes\exefile\shell\UninstallProgram\command]
+@="\"C:\\Tools\\uninstall-ctx\\uninstall-ctx.exe\" \"%1\""
